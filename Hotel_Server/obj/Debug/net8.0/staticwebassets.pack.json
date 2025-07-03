@@ -1,0 +1,41 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\boris\\OneDrive\\Рабочий стол\\Test_exercise\\Hotel_Server\\Hotel_Server\\wwwroot\\images\\Lyuks-2-komnatnyj-2.jpg",
+      "PackagePath": "staticwebassets\\images\\Lyuks-2-komnatnyj-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\boris\\OneDrive\\Рабочий стол\\Test_exercise\\Hotel_Server\\Hotel_Server\\wwwroot\\images\\bangkok-tailand-12-avgusta-2016-krasivaa-roskosnaa-spal-na-int.jpg",
+      "PackagePath": "staticwebassets\\images\\bangkok-tailand-12-avgusta-2016-krasivaa-roskosnaa-spal-na-int.jpg"
+    },
+    {
+      "Id": "C:\\Users\\boris\\OneDrive\\Рабочий стол\\Test_exercise\\Hotel_Server\\Hotel_Server\\wwwroot\\images\\images.jpg",
+      "PackagePath": "staticwebassets\\images\\images.jpg"
+    },
+    {
+      "Id": "C:\\Users\\boris\\OneDrive\\Рабочий стол\\Test_exercise\\Hotel_Server\\Hotel_Server\\wwwroot\\images\\istockphoto-1453121684-612x612.jpg",
+      "PackagePath": "staticwebassets\\images\\istockphoto-1453121684-612x612.jpg"
+    },
+    {
+      "Id": "C:\\Users\\boris\\OneDrive\\Рабочий стол\\Test_exercise\\Hotel_Server\\Hotel_Server\\wwwroot\\images\\sovremennaa-roskosnaa-spal-na-i-vannaa-komnata.jpg",
+      "PackagePath": "staticwebassets\\images\\sovremennaa-roskosnaa-spal-na-i-vannaa-komnata.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Hotel_Server.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.Hotel_Server.props",
+      "PackagePath": "build\\Hotel_Server.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.Hotel_Server.props",
+      "PackagePath": "buildMultiTargeting\\Hotel_Server.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.Hotel_Server.props",
+      "PackagePath": "buildTransitive\\Hotel_Server.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

@@ -1,0 +1,209 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\boris\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Test_exercise\\Hotel_Server\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9FFB80B9-0B80-4DE5-B507-ACF4F3C17A7A}|Hotel_Server\\Hotel_Server.csproj|c:\\users\\boris\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\test_exercise\\hotel_server\\hotel_server\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9FFB80B9-0B80-4DE5-B507-ACF4F3C17A7A}|Hotel_Server\\Hotel_Server.csproj|solutionrelative:hotel_server\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9FFB80B9-0B80-4DE5-B507-ACF4F3C17A7A}|Hotel_Server\\Hotel_Server.csproj|c:\\users\\boris\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\test_exercise\\hotel_server\\hotel_server\\controllers\\bookingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9FFB80B9-0B80-4DE5-B507-ACF4F3C17A7A}|Hotel_Server\\Hotel_Server.csproj|solutionrelative:hotel_server\\controllers\\bookingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9FFB80B9-0B80-4DE5-B507-ACF4F3C17A7A}|Hotel_Server\\Hotel_Server.csproj|c:\\users\\boris\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\test_exercise\\hotel_server\\hotel_server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9FFB80B9-0B80-4DE5-B507-ACF4F3C17A7A}|Hotel_Server\\Hotel_Server.csproj|solutionrelative:hotel_server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9FFB80B9-0B80-4DE5-B507-ACF4F3C17A7A}|Hotel_Server\\Hotel_Server.csproj|C:\\Users\\boris\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Test_exercise\\Hotel_Server\\hotel_server\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{9FFB80B9-0B80-4DE5-B507-ACF4F3C17A7A}|Hotel_Server\\Hotel_Server.csproj|solutionrelative:hotel_server\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9FFB80B9-0B80-4DE5-B507-ACF4F3C17A7A}|Hotel_Server\\Hotel_Server.csproj|C:\\Users\\boris\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Test_exercise\\Hotel_Server\\hotel_server\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{9FFB80B9-0B80-4DE5-B507-ACF4F3C17A7A}|Hotel_Server\\Hotel_Server.csproj|solutionrelative:hotel_server\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9FFB80B9-0B80-4DE5-B507-ACF4F3C17A7A}|Hotel_Server\\Hotel_Server.csproj|C:\\Users\\boris\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Test_exercise\\Hotel_Server\\hotel_server\\controllers\\roomscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9FFB80B9-0B80-4DE5-B507-ACF4F3C17A7A}|Hotel_Server\\Hotel_Server.csproj|solutionrelative:hotel_server\\controllers\\roomscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9FFB80B9-0B80-4DE5-B507-ACF4F3C17A7A}|Hotel_Server\\Hotel_Server.csproj|C:\\Users\\boris\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Test_exercise\\Hotel_Server\\hotel_server\\hotel_server.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{9FFB80B9-0B80-4DE5-B507-ACF4F3C17A7A}|Hotel_Server\\Hotel_Server.csproj|solutionrelative:hotel_server\\hotel_server.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9FFB80B9-0B80-4DE5-B507-ACF4F3C17A7A}|Hotel_Server\\Hotel_Server.csproj|C:\\Users\\boris\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Test_exercise\\Hotel_Server\\hotel_server\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{9FFB80B9-0B80-4DE5-B507-ACF4F3C17A7A}|Hotel_Server\\Hotel_Server.csproj|solutionrelative:hotel_server\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9FFB80B9-0B80-4DE5-B507-ACF4F3C17A7A}|Hotel_Server\\Hotel_Server.csproj|C:\\Users\\boris\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Test_exercise\\Hotel_Server\\hotel_server\\models\\hoteldbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9FFB80B9-0B80-4DE5-B507-ACF4F3C17A7A}|Hotel_Server\\Hotel_Server.csproj|solutionrelative:hotel_server\\models\\hoteldbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\boris\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Test_exercise\\Hotel_Server\\Hotel_Server\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "Hotel_Server\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\boris\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Test_exercise\\Hotel_Server\\Hotel_Server\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "Hotel_Server\\Controllers\\AuthController.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAzwGYAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-03T17:21:14.128Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "BookingController.cs",
+              "DocumentMoniker": "C:\\Users\\boris\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Test_exercise\\Hotel_Server\\Hotel_Server\\Controllers\\BookingController.cs",
+              "RelativeDocumentMoniker": "Hotel_Server\\Controllers\\BookingController.cs",
+              "ToolTip": "C:\\Users\\boris\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Test_exercise\\Hotel_Server\\Hotel_Server\\Controllers\\BookingController.cs",
+              "RelativeToolTip": "Hotel_Server\\Controllers\\BookingController.cs",
+              "ViewState": "AQIAACgAAAAAAAAAAAAowCoAAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-03T16:32:44.032Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\boris\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Test_exercise\\Hotel_Server\\Hotel_Server\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "Hotel_Server\\appsettings.Development.json",
+              "ToolTip": "C:\\Users\\boris\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Test_exercise\\Hotel_Server\\Hotel_Server\\appsettings.Development.json",
+              "RelativeToolTip": "Hotel_Server\\appsettings.Development.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-07-03T07:28:57.636Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\boris\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Test_exercise\\Hotel_Server\\Hotel_Server\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Hotel_Server\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\boris\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Test_exercise\\Hotel_Server\\Hotel_Server\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Hotel_Server\\Properties\\launchSettings.json",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAA8AAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-07-02T12:16:00.973Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Hotel_Server",
+              "DocumentMoniker": "C:\\Users\\boris\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Test_exercise\\Hotel_Server\\Hotel_Server\\Hotel_Server.csproj",
+              "RelativeDocumentMoniker": "Hotel_Server\\Hotel_Server.csproj",
+              "ToolTip": "C:\\Users\\boris\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Test_exercise\\Hotel_Server\\Hotel_Server\\Hotel_Server.csproj",
+              "RelativeToolTip": "Hotel_Server\\Hotel_Server.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-07-02T12:15:53.615Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "HotelDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\boris\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Test_exercise\\Hotel_Server\\Hotel_Server\\Models\\HotelDbContext.cs",
+              "RelativeDocumentMoniker": "Hotel_Server\\Models\\HotelDbContext.cs",
+              "ToolTip": "C:\\Users\\boris\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Test_exercise\\Hotel_Server\\Hotel_Server\\Models\\HotelDbContext.cs",
+              "RelativeToolTip": "Hotel_Server\\Models\\HotelDbContext.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAqwBoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-02T11:28:35.033Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "RoomsController.cs",
+              "DocumentMoniker": "C:\\Users\\boris\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Test_exercise\\Hotel_Server\\Hotel_Server\\Controllers\\RoomsController.cs",
+              "RelativeDocumentMoniker": "Hotel_Server\\Controllers\\RoomsController.cs",
+              "ToolTip": "C:\\Users\\boris\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Test_exercise\\Hotel_Server\\Hotel_Server\\Controllers\\RoomsController.cs",
+              "RelativeToolTip": "Hotel_Server\\Controllers\\RoomsController.cs",
+              "ViewState": "AQIAAFwAAAAAAAAAAAAUwGEAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-02T09:05:12.292Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\boris\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Test_exercise\\Hotel_Server\\Hotel_Server\\appsettings.json",
+              "RelativeDocumentMoniker": "Hotel_Server\\appsettings.json",
+              "ToolTip": "C:\\Users\\boris\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Test_exercise\\Hotel_Server\\Hotel_Server\\appsettings.json",
+              "RelativeToolTip": "Hotel_Server\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAB2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-07-02T08:24:58.203Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\boris\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Test_exercise\\Hotel_Server\\Hotel_Server\\Program.cs",
+              "RelativeDocumentMoniker": "Hotel_Server\\Program.cs",
+              "ToolTip": "C:\\Users\\boris\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Test_exercise\\Hotel_Server\\Hotel_Server\\Program.cs",
+              "RelativeToolTip": "Hotel_Server\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-02T08:22:04.733Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 52,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
