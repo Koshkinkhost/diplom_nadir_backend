@@ -1,4 +1,5 @@
-﻿using Hotel_Server.Models;
+﻿using Hotel_Server.DTO;
+using Hotel_Server.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -6,6 +7,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Hotel_Server.Controllers
 {
+    [Route("api/[controller]")]
     public class BookingController : Controller
     {
         private readonly HotelDbContext _context;
@@ -42,7 +44,7 @@ namespace Hotel_Server.Controllers
         // ✅ Создать бронирование
         [Authorize]
         [HttpPost]
-        public async Task<ActionResult<Booking>> CreateBooking(Booking booking)
+        public async Task<ActionResult<BookingDTO>> CreateBooking([FromBody]BookingDTO booking)
         {
             if (booking.CheckIn >= booking.CheckOut)
                 return BadRequest("Дата выезда должна быть позже даты заезда.");
@@ -56,8 +58,17 @@ namespace Hotel_Server.Controllers
 
             if (overlaps)
                 return Conflict("Номер уже забронирован на выбранные даты.");
+            Booking booking1 = new Booking()
+            {
+                RoomId = booking.RoomId,
+                GuestId = booking.GuestId,
+                CheckIn = booking.CheckIn,
+                CheckOut = booking.CheckOut,
+                CreatedAt = booking.CreatedAt,
+                Status = booking.Status,
 
-            _context.Bookings.Add(booking);
+            };
+            _context.Bookings.Add(booking1);
             await _context.SaveChangesAsync();
 
             return CreatedAtAction(nameof(GetBooking), new { id = booking.Id }, booking);

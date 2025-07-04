@@ -62,7 +62,12 @@ namespace Hotel_Server.Controllers
                     ExpiresUtc = DateTime.UtcNow.AddHours(1)
                 });
 
-            return Ok("Успешный вход");
+            return Ok(new
+            {
+                Id = user.Id,
+                Name = user.FullName,
+                Email = user.Email
+            });
         }
 
         [HttpPost("logout")]
@@ -75,11 +80,12 @@ namespace Hotel_Server.Controllers
         [HttpGet("me")]
         public IActionResult GetCurrentUser()
         {
-            if (!User.Identity?.IsAuthenticated ?? true)
-                return Unauthorized();
+            if(!User.Identity?.IsAuthenticated ?? true)
+        return Unauthorized();
 
             return Ok(new
             {
+                Id = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? "0"),
                 Name = User.Identity.Name,
                 Email = User.FindFirst(ClaimTypes.Email)?.Value
             });
