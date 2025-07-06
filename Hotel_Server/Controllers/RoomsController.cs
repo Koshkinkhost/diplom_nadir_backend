@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Hotel_Server.Models;
 using Microsoft.AspNetCore.Authorization;
+using Hotel_Server.DTO;
 
 namespace Hotel_Server.Controllers;
 
@@ -18,19 +19,28 @@ public class RoomsController : ControllerBase
 
     // GET: api/rooms
     [HttpGet]
-    public async Task<ActionResult<IEnumerable<Room>>> GetRooms()
-    {
-        return await _context.Rooms.ToListAsync();
-    }
+    //public async Task<ActionResult<IEnumerable<Room>>> GetRooms()
+    //{
+    //    return await _context.Rooms.ToListAsync();
+    //}
+    
 
-    // GET: api/rooms/5
-    [HttpGet("{id}")]
-    public async Task<ActionResult<Room>> GetRoom(int id)
-    {
-        var room = await _context.Rooms.FindAsync(id);
 
+    //// GET: api/rooms/5
+    //[HttpGet("{id}")]
+    public async Task<List<RoomWIthFalitires>> GetRooms()
+    {
+        var room = await _context.Rooms.Include(d => d.RoomFacilities).Select(u => new RoomWIthFalitires
+        {
+            RoomId = u.Id,
+            TypeR = u.Type,
+            PricePerNight = u.PricePerNight,
+            Description = u.Description,
+            MainImageUrl = u.MainImageUrl,
+            falitires = u.RoomFacilities.ToList(),
+        }).ToListAsync();
         if (room == null)
-            return NotFound();
+            return new List<RoomWIthFalitires>();
 
         return room;
     }
@@ -43,7 +53,7 @@ public class RoomsController : ControllerBase
         _context.Rooms.Add(room);
         await _context.SaveChangesAsync();
 
-        return CreatedAtAction(nameof(GetRoom), new { id = room.Id }, room);
+        return CreatedAtAction(nameof(GetRooms), new { id = room.Id }, room);
     }
 
     // PUT: api/rooms/5

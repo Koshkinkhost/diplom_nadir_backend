@@ -26,6 +26,11 @@ namespace Hotel_Server.Controllers
                 .OrderByDescending(b => b.CreatedAt)
                 .ToListAsync();
         }
+        [HttpGet("services")]
+        public async Task<ActionResult<IEnumerable<Service>>> GetServices()
+        {
+            return await _context.Services.ToListAsync();
+        }
 
         // ✅ Получить бронирование по ID
         [HttpGet("{id}")]
@@ -104,5 +109,6 @@ namespace Hotel_Server.Controllers
 
             return NoContent();
         }
+        
     }
 }
