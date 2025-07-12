@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 using Hotel_Server.Models;
+using Hotel_Server;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -28,7 +29,7 @@ builder.Services.AddCors(options =>
 
 // Cookie-based Authentication
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
-    .AddCookie(options =>
+    .AddCookie("StaffScheme", options =>
     {
         options.Cookie.HttpOnly = true;
         options.ExpireTimeSpan = TimeSpan.FromMinutes(5);
@@ -41,7 +42,7 @@ var app = builder.Build();
 
 app.UseCors(); // Важно: ставим перед UseAuthentication
 app.UseStaticFiles();
-
+app.UseMiddleware<MiddleWareLog>();
 app.UseAuthentication();
 app.UseAuthorization();
 

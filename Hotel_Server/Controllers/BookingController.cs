@@ -26,6 +26,11 @@ namespace Hotel_Server.Controllers
                 .OrderByDescending(b => b.CreatedAt)
                 .ToListAsync();
         }
+        [HttpGet("user/{id}")]
+        public async Task<ActionResult<IEnumerable<Booking>>> GetBookingsUser(int id)
+        {
+            return await _context.Bookings.Where(r=>r.GuestId==id).ToListAsync();    
+        }
         [HttpGet("services")]
         public async Task<ActionResult<IEnumerable<Service>>> GetServices()
         {

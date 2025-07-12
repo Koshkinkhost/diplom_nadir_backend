@@ -5,8 +5,10 @@
         public int Id { get; set; }
 
         public int GuestId { get; set; }
+        public string GuestName { get; set; }
 
         public int RoomId { get; set; }
+        public string Room {  get; set; }
 
         public DateOnly CheckIn { get; set; }
 
