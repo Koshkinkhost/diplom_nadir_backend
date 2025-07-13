@@ -10,6 +10,8 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Hotel_Server.Controllers
 {
+    [Route("api/[controller]")]
+
     public class AuthController : Controller
     {
         private readonly HotelDbContext _context;

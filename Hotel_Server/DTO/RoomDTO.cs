@@ -22,6 +22,6 @@ namespace Hotel_Server.DTO
         public string? GalleryJson { get; set; }
 
         public string? Status { get; set; }
-        public List<Facilities> facilities { get; set; }
+        public List<Facilities> falitires { get; set; }
     }
 }

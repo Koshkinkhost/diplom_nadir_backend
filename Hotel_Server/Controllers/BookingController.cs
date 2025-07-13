@@ -19,17 +19,32 @@ namespace Hotel_Server.Controllers
 
         // ✅ Получить все бронирования
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Booking>>> GetBookings()
+        public async Task<ActionResult<IEnumerable<BookingDTO>>> GetBookings()
         {
-            return await _context.Bookings
-                .Include(b => b.Room)
-                .OrderByDescending(b => b.CreatedAt)
-                .ToListAsync();
+            return await _context.Bookings.Select(r => new BookingDTO
+            {
+                GuestName = r.Guest.FullName,
+                CheckIn = r.CheckIn,
+                CheckOut = r.CheckOut,
+                Room=r.Room.Type,
+                RoomId=r.RoomId
+
+
+            }).ToListAsync();
         }
         [HttpGet("user/{id}")]
-        public async Task<ActionResult<IEnumerable<Booking>>> GetBookingsUser(int id)
+        public async Task<ActionResult<IEnumerable<BookingDTO>>> GetBookingsUser(int id)
         {
-            return await _context.Bookings.Where(r=>r.GuestId==id).ToListAsync();    
+            return await _context.Bookings.Select(r => new BookingDTO
+            {
+                GuestName = r.Guest.FullName,
+                CheckIn = r.CheckIn,
+                CheckOut = r.CheckOut,
+                Room = r.Room.Type,
+                RoomId = r.RoomId
+
+
+            }).Where(e=>e.GuestId==id).ToListAsync();
         }
         [HttpGet("services")]
         public async Task<ActionResult<IEnumerable<Service>>> GetServices()

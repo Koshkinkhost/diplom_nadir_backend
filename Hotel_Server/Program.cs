@@ -29,13 +29,17 @@ builder.Services.AddCors(options =>
 
 // Cookie-based Authentication
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+    .AddCookie(CookieAuthenticationDefaults.AuthenticationScheme, options =>
+    {
+        options.LoginPath = "/auth/login";
+        options.AccessDeniedPath = "/auth/access-denied";
+        options.Cookie.Name = "UserCookie";
+    })
     .AddCookie("StaffScheme", options =>
     {
-        options.Cookie.HttpOnly = true;
-        options.ExpireTimeSpan = TimeSpan.FromMinutes(5);
-        options.SlidingExpiration = true;
-        options.Cookie.Name = "AuthCookie";
-        options.Cookie.IsEssential = true;
+        options.LoginPath = "/staff/login";
+        options.AccessDeniedPath = "/staff/access-denied";
+        options.Cookie.Name = "StaffCookie";
     });
 
 var app = builder.Build();

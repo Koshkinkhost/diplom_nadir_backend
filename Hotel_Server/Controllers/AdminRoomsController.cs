@@ -62,9 +62,9 @@ namespace Hotel_Server.Controllers
 
             await _context.SaveChangesAsync();
 
-            if (room.facilities != null)
+            if (room.falitires != null)
             {
-                foreach (var facilityDto in room.facilities)
+                foreach (var facilityDto in room.falitires)
                 {
                     
                         var r1 = new RoomFacility()
@@ -106,6 +106,9 @@ namespace Hotel_Server.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteRoom(int id)
         {
+            var faciliti=_context.RoomFacilities.Where(r=>r.RoomId == id);
+            _context.RemoveRange(faciliti);
+            await _context.SaveChangesAsync();
             var room = await _context.Rooms.FindAsync(id);
             if (room == null)
                 return NotFound();
