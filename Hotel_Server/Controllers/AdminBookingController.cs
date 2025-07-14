@@ -30,6 +30,7 @@ namespace Hotel_Server.Controllers
                 CheckIn=u.CheckIn,
                 CheckOut=u.CheckOut,
                 CreatedAt=u.CreatedAt,
+                RoomNumber=u.Room.Number
 
 
             }).ToListAsync();
@@ -76,23 +77,49 @@ namespace Hotel_Server.Controllers
             booking.CheckOut = updated.CheckOut;
             booking.Status = updated.Status;
 
+            
+            var room = await _context.Rooms.FindAsync(booking.RoomId);
+            if (room != null)
+            {
+                room.Status = "Booked"; 
+            }
+
             await _context.SaveChangesAsync();
+            
             return Ok("Изменено");
         }
 
+
         // DELETE: api/admin/bookings/5
         [HttpDelete("{id}")]
+
         public async Task<IActionResult> DeleteBooking(int id)
         {
-            var booking = await _context.Bookings.FindAsync(id);
+            var booking = await _context.Bookings
+                .Include(b => b.Payments)
+                .Include(b => b.Room) // загружаем связанный номер
+                .FirstOrDefaultAsync(b => b.Id == id);
+
             if (booking == null)
             {
                 return NotFound();
             }
 
+            // Удаляем связанные платежи
+            _context.Payments.RemoveRange(booking.Payments);
+
+            // Освобождаем номер
+            if (booking.Room != null)
+            {
+                booking.Room.Status = "Available"; // или enum, если используешь
+            }
+
             _context.Bookings.Remove(booking);
             await _context.SaveChangesAsync();
-            return NoContent();
+
+            return Ok("Удалено");
         }
+
+
     }
 }

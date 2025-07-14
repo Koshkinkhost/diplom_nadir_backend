@@ -46,7 +46,10 @@ namespace Hotel_Server.Controllers
                 RoomId = r.RoomId,
                 Status = r.Status,
                 RoomNumber=r.Room.Number,
-                pricePerNight=r.Room.PricePerNight
+                pricePerNight=r.Room.PricePerNight,
+                Amount=r.Payments.Where(q=>q.BookingId==r.Id).Select(v=>v.Amount).FirstOrDefault()
+                
+                
 
 
             }).ToListAsync();
@@ -76,6 +79,10 @@ namespace Hotel_Server.Controllers
         [HttpPost]
         public async Task<ActionResult<BookingDTO>> CreateBooking([FromBody]BookingDTO booking)
         {
+            if (booking is null)
+            {
+                return BadRequest("Ошибка при бронировании");
+            }
             if (booking.CheckIn >= booking.CheckOut)
                 return BadRequest("Дата выезда должна быть позже даты заезда.");
 
@@ -106,7 +113,7 @@ namespace Hotel_Server.Controllers
             await _context.SaveChangesAsync();
             
             var booked = await _context.Rooms.Where(u => u.Id == booking1.RoomId).FirstOrDefaultAsync();
-            booked.Status = "Booked";
+            
             var pay = new Payment()
             {
                 Amount = booking.Amount,

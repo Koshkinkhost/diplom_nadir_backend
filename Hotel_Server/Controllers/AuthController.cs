@@ -61,7 +61,7 @@ namespace Hotel_Server.Controllers
                 new AuthenticationProperties
                 {
                     IsPersistent = true,
-                    ExpiresUtc  = DateTime.UtcNow.AddMinutes(1)
+                    ExpiresUtc  = DateTime.UtcNow.AddMinutes(5)
 
                 });
 

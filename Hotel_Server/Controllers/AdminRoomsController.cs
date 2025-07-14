@@ -21,16 +21,18 @@ namespace Hotel_Server.Controllers
 
         // GET: api/admin/rooms
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<RoomDTO>>> GetAllRooms()
+        public async Task<ActionResult<IEnumerable<RoomWIthFalitires>>> GetAllRooms()
         {
-            return await _context.Rooms.Select(u=>new RoomDTO
+            return await _context.Rooms.Select(u=>new RoomWIthFalitires
             {
-                Id=u.Id,
+                id=u.Id,
                 PricePerNight=u.PricePerNight,
                 Description=u.Description,
                 MainImageUrl=u.MainImageUrl,
-                Status=u.Status,
+                status=u.Status,
                 number=u.Number,
+                falitires = u.RoomFacilities.ToList(),
+
             }).ToListAsync();
         }
 

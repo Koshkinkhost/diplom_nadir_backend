@@ -37,7 +37,12 @@ namespace Hotel_Server.Controllers
             var identity = new ClaimsIdentity(claims, "staff_cookie");
             var principal = new ClaimsPrincipal(identity);
 
-            await HttpContext.SignInAsync("StaffScheme", principal); // схема должна быть настроена
+            await HttpContext.SignInAsync("StaffScheme", principal,new AuthenticationProperties
+                {
+                IsPersistent = true,
+                    ExpiresUtc = DateTime.UtcNow.AddMinutes(5)
+
+                }); // схема должна быть настроена
 
             return Ok(new
             {

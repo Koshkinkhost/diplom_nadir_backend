@@ -7,6 +7,7 @@ namespace Hotel_Server.DTO
         public int id { get; set; }
         public string? Type { get; set; }
         public string status {  get; set; }
+        public string number {  get; set; }
         public decimal PricePerNight { get; set; }
         public string? Description { get; set; }
 
