@@ -4,9 +4,9 @@ namespace Hotel_Server.DTO
 {
     public class RoomWIthFalitires
     {
-        public int RoomId { get; set; }
-        public string? TypeR { get; set; }
-
+        public int id { get; set; }
+        public string? Type { get; set; }
+        public string status {  get; set; }
         public decimal PricePerNight { get; set; }
         public string? Description { get; set; }
 

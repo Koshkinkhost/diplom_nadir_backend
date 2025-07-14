@@ -31,12 +31,18 @@ builder.Services.AddCors(options =>
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
     .AddCookie(CookieAuthenticationDefaults.AuthenticationScheme, options =>
     {
+        options.Cookie.HttpOnly = true;
+        options.ExpireTimeSpan = TimeSpan.FromMinutes(1);
         options.LoginPath = "/auth/login";
         options.AccessDeniedPath = "/auth/access-denied";
         options.Cookie.Name = "UserCookie";
     })
     .AddCookie("StaffScheme", options =>
     {
+        options.Cookie.HttpOnly = true;
+
+        options.ExpireTimeSpan = TimeSpan.FromMinutes(1);
+
         options.LoginPath = "/staff/login";
         options.AccessDeniedPath = "/staff/access-denied";
         options.Cookie.Name = "StaffCookie";

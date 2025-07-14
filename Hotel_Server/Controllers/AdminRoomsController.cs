@@ -29,7 +29,8 @@ namespace Hotel_Server.Controllers
                 PricePerNight=u.PricePerNight,
                 Description=u.Description,
                 MainImageUrl=u.MainImageUrl,
-                Status=u.Status
+                Status=u.Status,
+                number=u.Number,
             }).ToListAsync();
         }
 
@@ -48,38 +49,41 @@ namespace Hotel_Server.Controllers
         [HttpPost]
         public async Task<ActionResult<Room>> CreateRoom([FromBody] RoomDTO room)
         {
-            var r = new Room()
+            // Проверка: есть ли уже такая комната
+            bool numberExists = await _context.Rooms.AnyAsync(r => r.Number == room.number);
+            if (numberExists)
+                return Conflict($"Комната с номером {room.number} уже существует.");
+
+            var r = new Room
             {
                 Description = room.Description,
                 Number = room.number,
                 Status = room.Status,
                 MainImageUrl = room.MainImageUrl,
                 PricePerNight = room.PricePerNight,
-                Type=room.Type,
-                Capacity=room.Capacity,
+                Type = room.Type,
+                Capacity = room.Capacity,
             };
             _context.Rooms.Add(r);
-
             await _context.SaveChangesAsync();
 
             if (room.falitires != null)
             {
                 foreach (var facilityDto in room.falitires)
                 {
-                    
-                        var r1 = new RoomFacility()
-                        {
-                            RoomId = r.Id,
-                            Name = facilityDto.name,
-                        };
-                        _context.RoomFacilities.Add(r1);
-                    
+                    var r1 = new RoomFacility
+                    {
+                        RoomId = r.Id,
+                        Name = facilityDto.name,
+                    };
+                    _context.RoomFacilities.Add(r1);
                 }
             }
-            
+
             await _context.SaveChangesAsync();
-            return CreatedAtAction(nameof(GetRoom), new { id = room.Id }, room);
+            return CreatedAtAction(nameof(GetRoom), new { id = r.Id }, r);
         }
+
 
         // PUT: api/admin/rooms/5
         [HttpPut("{id}")]
@@ -92,15 +96,24 @@ namespace Hotel_Server.Controllers
             if (room == null)
                 return NotFound();
 
+            // Проверка: есть ли другая комната с таким номером
+            bool numberTaken = await _context.Rooms
+                .AnyAsync(r => r.Number == updatedRoom.Number && r.Id != id);
+            if (numberTaken)
+                return Conflict($"Комната с номером {updatedRoom.Number} уже существует.");
+
             room.Type = updatedRoom.Type;
+
             room.Description = updatedRoom.Description;
             room.PricePerNight = updatedRoom.PricePerNight;
             room.MainImageUrl = updatedRoom.MainImageUrl;
             room.RoomFacilities = updatedRoom.RoomFacilities;
+            room.Number = updatedRoom.Number; // обновление допустимо только если уникально
 
             await _context.SaveChangesAsync();
             return NoContent();
         }
+
 
         // DELETE: api/admin/rooms/5
         [HttpDelete("{id}")]

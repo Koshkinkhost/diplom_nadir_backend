@@ -27,24 +27,29 @@ namespace Hotel_Server.Controllers
                 CheckIn = r.CheckIn,
                 CheckOut = r.CheckOut,
                 Room=r.Room.Type,
-                RoomId=r.RoomId
+                RoomId=r.RoomId,
+                Status=r.Status,
 
 
             }).ToListAsync();
         }
         [HttpGet("user/{id}")]
-        public async Task<ActionResult<IEnumerable<BookingDTO>>> GetBookingsUser(int id)
+        public async Task<ActionResult<List<BookingDTO>>> GetBookingsUser(int id)
         {
-            return await _context.Bookings.Select(r => new BookingDTO
+            return await _context.Bookings.Where(e => e.GuestId == id).Select(r => new BookingDTO
             {
+                Id=r.Id,
                 GuestName = r.Guest.FullName,
                 CheckIn = r.CheckIn,
                 CheckOut = r.CheckOut,
                 Room = r.Room.Type,
-                RoomId = r.RoomId
+                RoomId = r.RoomId,
+                Status = r.Status,
+                RoomNumber=r.Room.Number,
+                pricePerNight=r.Room.PricePerNight
 
 
-            }).Where(e=>e.GuestId==id).ToListAsync();
+            }).ToListAsync();
         }
         [HttpGet("services")]
         public async Task<ActionResult<IEnumerable<Service>>> GetServices()
@@ -82,7 +87,11 @@ namespace Hotel_Server.Controllers
                      (booking.CheckIn <= b.CheckIn && booking.CheckOut >= b.CheckOut)));
 
             if (overlaps)
-                return Conflict("Номер уже забронирован на выбранные даты.");
+                return Conflict(new
+                {
+                    message = "Номер уже забронирован на выбранные даты."
+                }
+                    );
             Booking booking1 = new Booking()
             {
                 RoomId = booking.RoomId,
@@ -95,7 +104,18 @@ namespace Hotel_Server.Controllers
             };
             _context.Bookings.Add(booking1);
             await _context.SaveChangesAsync();
+            
+            var booked = await _context.Rooms.Where(u => u.Id == booking1.RoomId).FirstOrDefaultAsync();
+            booked.Status = "Booked";
+            var pay = new Payment()
+            {
+                Amount = booking.Amount,
+                BookingId = booking1.Id,
+                PaidAt = DateTime.Now
 
+            };
+            _context.Payments.Add(pay);
+            await _context.SaveChangesAsync();
             return CreatedAtAction(nameof(GetBooking), new { id = booking.Id }, booking);
         }
 

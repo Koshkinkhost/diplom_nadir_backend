@@ -19,22 +19,15 @@ public class RoomsController : ControllerBase
 
     // GET: api/rooms
     [HttpGet]
-    //public async Task<ActionResult<IEnumerable<Room>>> GetRooms()
-    //{
-    //    return await _context.Rooms.ToListAsync();
-    //}
-    
-
-
-    //// GET: api/rooms/5
-    //[HttpGet("{id}")]
+ 
     public async Task<List<RoomWIthFalitires>> GetRooms()
     {
         var room = await _context.Rooms.Include(d => d.RoomFacilities).Select(u => new RoomWIthFalitires
         {
-            RoomId = u.Id,
-            TypeR = u.Type,
+            id = u.Id,
+            Type = u.Type,
             PricePerNight = u.PricePerNight,
+            status=u.Status,
             Description = u.Description,
             MainImageUrl = u.MainImageUrl,
             falitires = u.RoomFacilities.ToList(),
